@@ -41,4 +41,4 @@ productSchema.virtual("hasPermalink").get(function() {
     return this.permalink ? true : false;
 })
 
-export default mongoose.model("Product", productSchema, "listingAndReviews");
+export default mongoose.model("Product", productSchema, "listingsAndReviews");

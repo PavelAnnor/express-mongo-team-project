@@ -1,13 +1,18 @@
-import Product from "../models/product.js";
+import Product from "../models/product.js"
 
 // Create function (createProduct)
-export async function createListing(req, res) {
-    const result = await Product.find({}).limit(10)
-    res.json(result)
+export async function createProduct(req, res) {
+
+    const result = await Product.create(req.body)
+    res.send(result)
+    
 }
 
 // Read All function (getProducts)
-export async function getListings(req, res) {}
+export async function getAllProducts(req, res) {
+  const result = await Product.find({}).limit(10);
+  res.json(result);
+}
 
 // Read One function (getProductById)
 export async function getProductById(req, res) {}
