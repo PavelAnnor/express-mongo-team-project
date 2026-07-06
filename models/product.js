@@ -6,6 +6,10 @@ const productSchema = new mongoose.Schema({
     // Each property can have a type field that describdes
     // the valid data types for that field, and a
     // required field to specify whether it is required.
+    _id:{
+        required:true,
+        type:String
+    },
     body: {
         type: String,
         required: true

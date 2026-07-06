@@ -1,4 +1,6 @@
 import Product from "../models/product.js"
+import { ObjectId } from "mongoose";
+
 
 // Create function (createProduct)
 export async function createProduct(req, res) {
@@ -16,8 +18,11 @@ export async function getAllProducts(req, res) {
 
 // Read One function (getProductById)
 export async function getProductById(req, res) {
+   
+
   try {
     const product = await Product.findById(req.params.id);
+    console.log("we got here")
 
     if (!product) {
       return res.status(404)
