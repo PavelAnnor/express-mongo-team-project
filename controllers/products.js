@@ -1,24 +1,33 @@
-// Create function (createProduct)
-export const createProduct = async (req, res) => {
+import Product from "../models/product.js";
 
-};
+// Create function (createProduct)
+export async function createProduct(req, res) {
+
+}
+
 
 // Read All function (getProducts)
-export const getProducts = async (req, res) => {
+export async function getProducts(req, res) {
 
-};
+}
+
 
 // Read One function (getProductById)
-export const getProductById = async (req, res) => {
+export async function getProductById(req, res) {
 
-};
+}
+
 
 // Update function (updateProduct)
-export const updateProduct = async (req, res) => {
+export async function updateProduct(req, res) {
 
-};
+}
+
 
 // Delete function (deleteProduct)
-export const deleteProduct = async (req, res) => {
+export async function deleteProduct(req, res) {
+    const result = await Product.findByIdAndDelete(req.params.id);
+    res.json(result);
+}
 
-};
+
