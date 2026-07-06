@@ -15,7 +15,12 @@ export async function getAllProducts(req, res) {
 }
 
 // Read One function (getProductById)
-export async function getProductById(req, res) {}
+export async function getProductById(req, res) {
+
+   
+}
+
+
 
 // Update function (updateProduct)
 export async function updateProduct(req, res) {}
