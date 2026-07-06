@@ -1,3 +1,5 @@
+import Product from "../models/product.js";
+
 // Create function (createProduct)
 export const createProduct = async (req, res) => {
 
