@@ -3,9 +3,12 @@ import {connectDB} from "./conn.js"
 const app = express();
 const PORT = 3000;
 import Product from "./models/product.js"
-// import router from "./routes/listingandReviews.js"
 
-// app.use(router)
+import router from "./routes/products.js";
+
+app.use(express.json());
+
+app.use(router)
 
 app.listen(PORT,()=>{
     console.log("Sever running")
