@@ -37,8 +37,8 @@ const productSchema = new mongoose.Schema({
 // of the objects that the schema describes.
 
 //virtual property that doesn't affect the database
-productSchemaSchema.virtual("hasPermalink").get(function() {
+productSchema.virtual("hasPermalink").get(function() {
     return this.permalink ? true : false;
 })
 
-export default mongoose.model("Product", productSchema);
+export default mongoose.model("Product", productSchema, "listingAndReviews");
