@@ -15,7 +15,19 @@ export async function getAllProducts(req, res) {
 }
 
 // Read One function (getProductById)
-export async function getProductById(req, res) {}
+export async function getProductById(req, res) {
+  try {
+    const product = await Product.findById(req.params.id);
+
+    if (!product) {
+      return res.status(404)
+    }
+
+    res.json(product);
+  } catch (err) {
+    res.status(400).json({ message: "nah stoopid", error: err.message});
+  }
+}
 
 // Update function (updateProduct)
 export async function updateProduct(req, res) {}
